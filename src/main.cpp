@@ -49,6 +49,9 @@ void loop() {
     }
     if (led != 99) {
       digitalWrite(led, abs(digitalRead(led) - 1));
+      // After flipping light return the state of all apps to the mobile app.
+      // This reduces state request calls
+      btSerial.println(String(digitalRead(r)) + String(digitalRead(y)) + String(digitalRead(g)));
     }
   }
 }
