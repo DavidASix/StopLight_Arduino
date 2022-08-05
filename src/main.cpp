@@ -26,26 +26,29 @@ void setup() {
   pinMode(r, OUTPUT);
   pinMode(y, OUTPUT);
   pinMode(g, OUTPUT);
-  
+
 }
 
 void loop() {
   if (btSerial.available()) {
     char txt = btSerial.read();
+    led = 99;
     switch (txt) {
       case 'r': led = r; break;
       case 'y': led = y; break;
       case 'g': led = g; break;
-      case 't': 
+      case 't':
         tempSensor.requestTemperatures();
         tempCelsius = tempSensor.getTempCByIndex(0);
         btSerial.println(tempCelsius);
         break;
-      case 's': 
+      case 's':
         btSerial.println(String(digitalRead(r)) + String(digitalRead(y)) + String(digitalRead(g)));
         break;
-      default: led = 99; break;
+      default: break;
     }
-    digitalWrite(led, abs(digitalRead(led) - 1));
+    if (led != 99) {
+      digitalWrite(led, abs(digitalRead(led) - 1));
+    }
   }
 }
