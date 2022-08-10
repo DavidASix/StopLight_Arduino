@@ -13,4 +13,4 @@ I had quite a few ideas for it, including a sonar based proximity sensor to be h
 The circuit is relatively simple. As older stoplights use regular 120 volt light bulbs, I simply wired up three solid state relays into the lamps and my Arduino Nano's outputs. I then connected an HM-10 module aptly named "Real Stop Light" and the base was laid.
 I realized quickly that the lights get *quite* hot, so I included a DS18B20 temperature sensor as well. Then I wired in a standard AC plug, linked directly to the relays and to a USB block for the Arduino.
 
-<img src="./images/ArduinoCircuit.jpg">
+<img src="./images/ArduinoCircuit.jpg" width="400">
