@@ -3,7 +3,7 @@
 Years ago my grandpa acquired a full sized municipal traffic light from a scrap yard picker. Hey brought it home for my dad and I, and it became my first significant Arduino project. It consisted of some relays and an Uno board, running a set loop of instructions. I remember standing out on the sidewalk infront of the house timing how long the stoplights took to change, and then setting those delays in my little Arduino sketch.
 
 ![Image of App & StopLight](./images/AppImage.jpg | width=375)
-<img src="https://github.com/favicon.ico" width="48">
+<img src="./images/AppImage.jpg" width="48">
 
 Recently the stop light was passed down to me, and so I brought it home and started on a full redesign.
 
